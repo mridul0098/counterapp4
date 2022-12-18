@@ -11,7 +11,7 @@ class Myapp extends StatefulWidget {
 
 class _MyappState extends State<Myapp> {
 
-  int counting=0;
+  int counting=5;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
