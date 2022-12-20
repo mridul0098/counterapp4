@@ -10,26 +10,74 @@ class Myapp extends StatefulWidget {
 }
 
 class _MyappState extends State<Myapp> {
-
-  int counting=5;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title:Text("home page"),),
-    body: Center(
-    child: Text(counting.toString()),
-    ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
-          onPressed: (){
+        appBar: AppBar(title: Text("sum app"),),
+        body: Padding(
+          padding: const EdgeInsets.all(30.0),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
 
-            setState(() {
-              counting=counting+1;
-              print(counting);
-            });
-          },
+                TextField(
+                  //controller: nameController,
+                  obscureText: true,
+                  decoration: InputDecoration(
+
+                    border:OutlineInputBorder() ,
+                    labelText: 'User Name',
+                    hintText: 'Enter Your Name',
+                  ),
+                ),
+                SizedBox(
+                  height:20,
+                ),
+                TextField(
+                  //controller: nameController,
+                  obscureText: true,
+                  decoration: InputDecoration(
+
+                    border:OutlineInputBorder() ,
+                    labelText: 'User Name',
+                    hintText: 'Enter Your Name',
+                  ),
+                ),
+                SizedBox(
+                  height:20,
+                ),
+                TextField(
+                  //controller: nameController,
+                  obscureText: true,
+                  decoration: InputDecoration(
+
+                    border:OutlineInputBorder() ,
+                    labelText: 'User Name',
+                    hintText: 'Enter Your Name',
+                  ),
+                ),
+                SizedBox(
+                  height:20,
+                ),
+                Container(
+                  width: double.infinity,
+                  height: 50,
+                  child: ElevatedButton(
+                      onPressed: (){},
+                      child:Text("sum")
+                  ),
+                ),
+                SizedBox(
+                  height:20,
+                ),
+                Text("sum is="),
+              ],
+            ),
+          ),
         ),
-    ));
+      ),
+    );
   }
 }
